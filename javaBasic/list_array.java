@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class list_array 
 {
@@ -10,7 +11,6 @@ public class list_array
         //     : 초기 정의된 크기만큼의 연속적인 메모리 공간 -> 관리 편리
         //     : 논리적 저장 순서 == 물리적 저장 순서
         //     : 데이터 삭제 후 빈 공간으로 남게되어 낭비 생김
-
         String arr1[] = new String[]{"a","b","c","d","e"};
         
         String arr2[] = new String[5];
@@ -32,6 +32,8 @@ public class list_array
         //       : 데이터 삭제 시, 포인터가 해당 메모리 공간을 가리키지 않으면 되므로 효율적 (linked ist)
         //       : 기본 타입 못 다음 (객체만 가능)
         //       : n번째 데이터 참조하려면 1-> 2-> ->.. -> n번째 처럼 순차적인 포인터 접근 (linked list)
+        
+        //List 선언 방식 1
         List<String> list1 = new ArrayList<>();
         list1.add("a");
         list1.add("b");
@@ -40,7 +42,10 @@ public class list_array
         for(String item : list1)
             System.out.println(item);
         
-            //asList를 이용한 선언과 동시에 값 할당
+        //asList를 이용한 선언과 동시에 값 할당 (2)
         List<String> list2 = Arrays.asList(new String[]{"a","b","c"}); //array를 list에 할당
+        
+        for(String item: list2)
+            System.out.println(item);
     }
 }
